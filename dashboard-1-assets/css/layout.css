@@ -1,0 +1,35 @@
+.container {
+  grid-template-areas:
+    "headline1"
+    "headline2"
+    "list"
+    "barchart"
+    "radialbar"
+    "gaugechart"
+    "avatar-list"
+    "timeline-list"
+    "areachart"
+    "linechart";
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "headline1 headline2"
+      "list list"
+      "barchart barchart"
+      "radialbar gaugechart"
+      "avatar-list timeline-list"
+      "areachart linechart";
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    grid-template-areas:
+      "headline1 headline2 list list"
+      "radialbar barchart barchart gaugechart"
+      "avatar-list avatar-list timeline-list timeline-list"
+      "areachart areachart linechart linechart";
+  }
+}

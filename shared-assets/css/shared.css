@@ -1,0 +1,139 @@
+/* Card */
+.card {
+  position: relative;
+  padding: var(--length-md1);
+  background: var(--color-card);
+  border-radius: var(--length-md1);
+}
+
+.card.has-extra-padding {
+  padding: var(--length-md3) var(--length-md3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-header-icon {
+  font-size: var(--length-md2);
+}
+
+.card-h4 {
+  margin-bottom: 4px;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  color: var(--color-label);
+}
+
+.card-h3 {
+  margin-bottom: var(--length-md1);
+  color: var(--color-label);
+  font-size: var(--text-md);
+  font-weight: 500;
+}
+
+.card-h3.no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.card-h2 {
+  font-size: var(--length-md3);
+  font-weight: 500;
+}
+
+.card-h2.has-bottom-margin {
+  margin-bottom: var(--length-lg1);
+}
+
+/* Avatar List */
+.avatar-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.avatar-list > li {
+  display: flex;
+  gap: var(--length-sm3);
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--length-md2);
+}
+
+.avatar {
+  width: var(--length-lg1);
+  height: var(--length-lg1);
+}
+
+.avatar-title,
+.avatar-notes {
+  display: block;
+  line-height: 1;
+}
+
+.avatar-title {
+  font-size: var(--text-sm);
+  margin-bottom: 3px;
+}
+
+.avatar-notes {
+  color: var(--color-label);
+  font-size: var(--text-sm);
+}
+
+.avatar-text-block {
+  flex: 1;
+}
+
+/* Timeline */
+.timeline {
+  padding-top: var(--length-md2);
+}
+
+.timeline-row {
+  position: relative;
+  display: flex;
+  padding-bottom: var(--length-md1);
+}
+
+.timeline-when {
+  width: 3.5rem;
+  min-width: 3.5rem;
+  max-width: 3.5rem;
+  margin-top: 2px;
+  font-size: var(--text-xs);
+  text-align: right;
+}
+
+.timeline-badge {
+  width: var(--length-sm3);
+  min-width: var(--length-sm3);
+  max-width: var(--length-sm3);
+  height: var(--length-sm3);
+  margin: 1.5px 0.5rem 0;
+  border-radius: 50%;
+  border: 3px solid var(--color-default);
+  background: var(--color-card);
+}
+
+.timeline-row.primary .timeline-badge {
+  border-color: var(--color-primary);
+}
+
+.timeline-badge::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 4.5rem;
+  width: 2px;
+  height: calc(100% - 22px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-text {
+  color: var(--color-label);
+  font-size: var(--text-sm);
+  text-align: left;
+}

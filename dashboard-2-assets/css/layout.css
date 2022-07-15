@@ -1,0 +1,25 @@
+.container {
+  grid-template-areas:
+    "headline1 headline2"
+    "list list"
+    "line-chart line-chart"
+    "line-chart-2 line-chart-2";
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "headline1 headline2"
+      "list list"
+      "line-chart line-chart"
+      "line-chart-2 line-chart-2";
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    grid-template-areas:
+      "headline1 headline2 list list"
+      "line-chart line-chart line-chart-2 line-chart-2";
+  }
+}

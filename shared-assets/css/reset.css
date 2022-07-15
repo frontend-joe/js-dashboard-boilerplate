@@ -1,0 +1,80 @@
+/* Variables */
+:root {
+  --color-primary: #de406d;
+  --color-accent: #fffffa;
+  --color-default: #363636;
+
+  --color-background: #242424;
+  --color-card: #1b1b1b;
+  --color-border: #888888;
+
+  --color-text: #f9f9f9;
+  --color-label: #aaaaaa;
+  --color-disabled: #888888;
+
+  --length-sm1: 0.3rem;
+  --length-sm2: 0.6rem;
+  --length-sm3: 0.8rem;
+
+  --length-md1: 1rem;
+  --length-md2: 1.4rem;
+  --length-md3: 1.8rem;
+
+  --length-lg1: 2.7rem;
+  --length-lg2: 3.3rem;
+  --length-lg3: 4.4rem;
+
+  --length-xl1: 6.5rem;
+  --length-xl2: 8.5rem;
+  --length-xl3: 10.5rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.75rem;
+
+  --font-weight-semibold: 400;
+}
+
+[data-theme="purple"] {
+  --color-primary: #a758e3;
+}
+
+[data-theme="red"] {
+  --color-primary: #de406d;
+}
+
+[data-theme="green"] {
+  --color-primary: #16b375;
+}
+
+[data-theme="blue"] {
+  --color-primary: #398bf8;
+}
+
+/* Defaults */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Sora", Arial, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1;
+  font-weight: var(--font-weight-semibold);
+}
+
+button,
+select {
+  font-family: inherit;
+  cursor: pointer;
+}

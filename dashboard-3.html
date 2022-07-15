@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML CSS Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="shared-assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="shared-assets/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="shared-assets/css/shared.css"
+    />
+    <link rel="stylesheet" type="text/css" href="shared-assets/css/cards.css" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-3-assets/css/reset.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-3-assets/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-3-assets/css/cards.css"
+    />
+  </head>
+  <body data-theme="dark">
+    <div id="preloader" class="preloader">
+      <div class="spinner"></div>
+    </div>
+    <button class="dark-mode-toggle uil uil-moon"></button>
+    <div class="container">
+      <div class="card card-headline card-headline1">
+        <div>
+          <h4 class="card-h4">Products</h4>
+          <h2 class="card-h2" id="totalProducts"></h2>
+        </div>
+        <span
+          class="card-headline-icon card-headline-icon-primary uil uil-arrow-growth"
+        ></span>
+      </div>
+      <div class="card card-headline card-headline2">
+        <div>
+          <h4 class="card-h4">Drinks</h4>
+          <h2 class="card-h2" id="totalDrinks"></h2>
+        </div>
+        <span
+          class="card-headline-icon card-headline-icon-primary uil uil-users-alt"
+        ></span>
+      </div>
+      <div class="card card-bar-figure-chart">
+        <div class="card-bar-figure-chart-wrapper">
+          <h2 class="card-h2 card-bar-figure-chart-h2">Top Brands</h2>
+          <canvas id="figureBarChart" width="400" height="140"></canvas>
+        </div>
+        <div class="card-bar-figure-chart-figures">
+          <div>
+            <h4 class="card-h4">Average Sales</h4>
+            <h2 class="card-h2">$650</h2>
+          </div>
+          <div>
+            <h4 class="card-h4">Commission</h4>
+            <h2 class="card-h2">$24,200</h2>
+          </div>
+          <div>
+            <h4 class="card-h4">Revenue</h4>
+            <h2 class="card-h2">$57,000</h2>
+          </div>
+          <div>
+            <h4 class="card-h4">Expenses</h4>
+            <h2 class="card-h2">$1,120,000</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card card-area-table-chart">
+        <div class="card-area-table-chart-wrapper">
+          <header class="card-header">
+            <div>
+              <h2 class="card-h2">Sales Activity</h2>
+              <h3 class="card-h3">Select sales by year</h3>
+            </div>
+            <div>
+              <button type="button">2021</button>
+              <button class="active" type="button">2022</button>
+            </div>
+          </header>
+          <canvas id="areaTableChart" width="400" height="220"></canvas>
+        </div>
+        <div class="card-area-table-wrapper">
+          <table class="card-area-table">
+            <tr>
+              <th></th>
+              <th>2021</th>
+              <th>2022</th>
+            </tr>
+            <tr>
+              <td>Average Sales</td>
+              <td>$650</td>
+              <td>$650</td>
+            </tr>
+            <tr>
+              <td>Commission</td>
+              <td>$24,200</td>
+              <td>$24,200</td>
+            </tr>
+            <tr>
+              <td>Revenue</td>
+              <td>$57,000</td>
+              <td>$234,000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="card card-radial-bar-chart">
+        <header class="card-header">
+          <h2 class="card-h2 no-margin">Product Focus</h2>
+          <select
+            id="productSelect"
+            onchange="selectProduct(this.value)"
+          ></select>
+        </header>
+        <div class="card-radial-bar-chart-row">
+          <div class="card-radial-bar-chart-wrapper">
+            <div class="card-radial-bar-rail"></div>
+            <div class="card-radial-bar-canvas-wrapper">
+              <canvas id="radialBarChart"></canvas>
+            </div>
+          </div>
+          <div>
+            <h2 class="card-radial-bar-chart-feature-h2">Breakdown</h2>
+            <div
+              class="card-radial-bar-chart-feature-grid"
+              id="factsGrid"
+            ></div>
+          </div>
+        </div>
+        <div class="card-radial-bar-chart-footer">
+          <button class="card-radial-bar-chart-button">Report</button>
+          <button class="card-radial-bar-chart-button primary">Action</button>
+        </div>
+      </div>
+      <div class="card card-paged-table">
+        <div class="card-paged-table-header">
+          <div>
+            <h2 class="card-h2">All Drinks</h2>
+            <h3 class="card-h3">A paged table of all drinks in our database</h3>
+          </div>
+        </div>
+
+        <div class="paged-table-wrapper">
+          <div class="paged-table-spinner" id="pagedTableSpinner"></div>
+          <table id="pagedTable"></table>
+        </div>
+
+        <div class="card-footer">
+          <span class="paged-table-count" id="pagedTableCount">10</span>
+          <div id="pagination" class="pagination"></div>
+        </div>
+      </div>
+    </div>
+    <script src="dashboard-3-assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+#map1,
+#map2 {
+  height: 420px;
+}
+
+.leaflet-container {
+  background: transparent;
+}
+
+.leaflet-control-attribution.leaflet-control {
+  display: none;
+}
+
+.leaflet-interactive {
+  stroke: var(--color-card);
+  stroke-width: 1px;
+  fill: var(--color-default);
+  fill-opacity: 1;
+}
+
+.leaflet-marker {
+  position: relative;
+  fill: var(--color-primary);
+  stroke: transparent;
+}
+
+.leaflet-marker-div {
+  position: relative;
+  display: block;
+  width: var(--length-md1) !important;
+  height: var(--length-md1) !important;
+  border-radius: 50%;
+}
+
+#map1 .leaflet-marker-div {
+  background: var(--color-primary);
+}
+
+#map2 .leaflet-marker-div {
+  background: var(--color-accent);
+}
+
+@keyframes pulse {
+  0%,
+  30% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  80%,
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+.leaflet-marker-div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: inherit;
+  border: 2px solid;
+  transform: translate(-50%, -50%);
+  animation: pulse 3s 3s infinite linear;
+}
+
+#map1 .leaflet-marker-div::before {
+  border-color: var(--color-primary);
+}
+
+#map2 .leaflet-marker-div::before {
+  border-color: var(--color-accent);
+}
+
+.leaflet-tooltip {
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  border: 0;
+  font-family: Sora;
+  font-size: var(--length-sm3);
+  padding: 0.5rem 1rem;
+  transition: opacity 0.5s;
+}
+
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  display: none;
+}

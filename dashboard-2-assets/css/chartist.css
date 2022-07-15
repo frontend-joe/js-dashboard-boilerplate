@@ -1,0 +1,65 @@
+/* Chart Wrappers */
+.line-chart-wrapper {
+  height: 236px;
+  display: flex;
+}
+
+/* Chartist Overrides */
+.ct-series .ct-line {
+  stroke: url(#shadowLineChartGradient);
+}
+
+.ct-point {
+  display: none;
+}
+
+.ct-label {
+  color: rgba(255,255,255, 0.45);
+}
+
+.ct-line-marker {
+  fill: var(--color-card);
+  stroke-width: 4px;
+}
+
+.line-chart .ct-line-marker {
+  stroke: var(--color-primary);
+}
+
+.line-chart-2 .ct-line-marker {
+  stroke: var(--color-accent);
+}
+
+.ct-grid.ct-horizontal:first-child,
+.ct-grid.ct-horizontal:last-child {
+  display: none;
+}
+
+.ct-grid.ct-horizontal {
+  stroke: url(#gridGradient);
+  stroke-dasharray: 8;
+  stroke-width: 2;
+}
+
+.line-chart .ct-series .ct-line {
+  stroke: url(#lineGradient1);
+}
+
+.line-chart-2 .ct-series .ct-line {
+  stroke: url(#lineGradient2);
+}
+
+.ct-series .ct-area {
+  fill: url(#areaGradient);
+  fill-opacity: 1;
+}
+
+.ct-labels {
+  transform: translateY(10px);
+}
+
+.ct-chart-line .ct-label.ct-horizontal {
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}

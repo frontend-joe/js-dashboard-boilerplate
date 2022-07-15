@@ -1,0 +1,405 @@
+/* Card Defaults */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+}
+
+.card-header button {
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 0;
+  border-radius: 2rem;
+  color: var(--color-label);
+}
+
+.card-header button.active {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.card-h2 {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  text-align: left;
+}
+
+.card-h2.no-margin {
+  margin: 0;
+}
+
+.card-h3 {
+  font-size: 0.875rem;
+  margin: 0;
+  text-align: left;
+}
+
+/* Card Bespoke Styles */
+
+.card-headline1 {
+  grid-area: headline1;
+}
+
+.card-headline2 {
+  grid-area: headline2;
+}
+
+.card-headline1 .card-h2,
+.card-headline2 .card-h2 {
+  font-size: 1.5rem;
+}
+
+.card.card-area-table-chart,
+.card.card-bar-figure-chart {
+  padding: 0;
+}
+
+.card.card-bar-figure-chart {
+  grid-area: bar-figure-chart;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: var(--length-md1);
+  border-top-right-radius: var(--length-md1);
+}
+
+.card-bar-figure-chart-wrapper {
+  padding: 2.5rem 1.5rem 0;
+}
+
+.card-bar-figure-chart-wrapper {
+  background: var(--color-primary);
+  padding-bottom: 1.95rem;
+}
+
+.card-bar-figure-chart-h2 {
+  color: var(--color-primary-text);
+}
+
+.card-bar-figure-chart-h2 .uil {
+  font-size: var(--length-md2);
+}
+
+.card-bar-figure-chart-figures {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--length-md3);
+  padding: var(--length-lg2) var(--length-lg1);
+  margin-top: -2rem;
+  border-radius: var(--length-md1);
+  background: var(--color-card);
+  text-align: left;
+}
+
+.card-bar-figure-chart-figures .card-h4 {
+  margin-bottom: var(--length-sm2);
+}
+
+.card-bar-figure-chart-figures .card-h2 {
+  font-size: var(--length-md2);
+}
+
+/* Area Table Chart */
+.card-area-table-chart-h2 {
+  color: var(--color-text);
+}
+
+.card-area-table-chart {
+  grid-area: area-table-chart;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-area-table-chart-wrapper {
+  padding: 1.5rem 1rem 1rem;
+}
+
+.card-area-table-wrapper {
+  flex: 1 1 auto;
+  display: grid;
+  place-items: center;
+  padding: 0 2rem 1rem;
+}
+
+.card-area-table {
+  width: 100%;
+  text-align: left;
+}
+
+.card-area-table th {
+  text-align: right;
+  font-size: var(--length-sm3);
+  font-weight: 400;
+  color: var(--color-label);
+  padding: 0;
+  height: 10px;
+}
+
+.card-area-table td {
+  text-align: right;
+  vertical-align: center;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 0.75rem 0;
+}
+
+.card-area-table tr td:first-child {
+  text-align: left;
+  font-size: var(--length-sm3);
+  font-weight: 400;
+  color: var(--color-label);
+}
+
+/* Radial Bar Chart Card */
+.card-radial-bar-chart {
+  grid-area: radial-bar;
+  padding: 1.5rem 2rem 1rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-radial-bar-chart-wrapper {
+  position: relative;
+  display: grid;
+  width: 100px;
+  height: 100px;
+}
+
+.card-radial-bar-canvas-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 100px;
+  height: 100px;
+}
+
+.card-radial-bar-rail {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 10px solid var(--color-grey);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.card-radial-bar-chart-row {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .card-radial-bar-chart-row {
+    flex-direction: row;
+  }
+}
+
+.card-radial-bar-chart-feature-h2 {
+  font-size: var(--length-md1);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .card-radial-bar-chart-feature-h2 {
+    text-align: left;
+  }
+}
+
+.card-radial-bar-chart-feature-grid {
+  display: grid;
+  gap: 0.75rem 0.5rem;
+  grid-template-columns: repeat(4, auto);
+  padding: 0.5rem 0;
+}
+
+.card-radial-bar-chart-feature-icon {
+  display: grid;
+  place-items: center;
+  width: var(--length-md1);
+  height: var(--length-md1);
+  background: var(--color-grey);
+  color: var(--color-label);
+  border-radius: 4px;
+}
+
+.card-radial-bar-chart-feature-text {
+  font-size: var(--length-sm3);
+  color: var(--color-label);
+  margin-right: 0.5rem;
+}
+
+.card-radial-bar-chart-footer {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .card-radial-bar-chart-footer {
+    justify-content: flex-start;
+  }
+}
+
+.card-radial-bar-chart-button {
+  padding: 1rem;
+  min-width: 6rem;
+  border: 0;
+  border-radius: var(--length-sm1);
+  background: var(--color-grey);
+  color: var(--color-label);
+}
+
+.card-radial-bar-chart-button.primary {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}
+
+.card-radial-bar-chart select {
+  background: transparent;
+  color: var(--color-label);
+  border: 0;
+}
+
+/* Paged Table Card */
+.card-paged-table {
+  grid-area: paged-table;
+}
+
+.paged-table-wrapper {
+  margin-top: 1.5rem;
+  position: relative;
+  display: flex;
+}
+
+#pagedTable {
+  margin: 0;
+  transition: all 0.3s;
+}
+
+#pagedTable.loading {
+  opacity: 0.05;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.paged-table-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.5rem;
+  margin-left: -1.5rem;
+  border-radius: 50%;
+  border: 6px solid var(--color-grey);
+  border-top-color: var(--color-primary);
+  visibility: hidden;
+  opacity: 1;
+  transition: all 0.3s;
+  animation: spin 1s infinite linear;
+}
+
+.paged-table-spinner.loading {
+  visibility: visible;
+  opacity: 1;
+}
+
+.card-paged-table img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-paged-table table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.card-paged-table td {
+  padding: 0.25rem 0;
+  text-align: left;
+}
+
+.card-paged-table tr td:nth-child(1) {
+  padding-right: 1rem;
+  max-width: 3rem;
+}
+
+.card-paged-table tr td:nth-child(2) {
+  max-width: 200px;
+}
+
+.card-paged-table tr td:last-child {
+  text-align: right;
+}
+
+.card-paged-table .title,
+.card-paged-table .brand {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  width: 100%;
+}
+
+.card-paged-table .title {
+  margin-bottom: 4px;
+  font-size: var(--length-sm3);
+}
+
+.card-paged-table .brand {
+  margin-bottom: 4px;
+  font-size: var(--length-sm3);
+  color: var(--color-label);
+}
+
+.paged-table-count {
+  font-size: var(--length-sm3);
+  color: var(--color-label);
+}
+
+.pagination {
+  display: flex;
+  gap: 0.25rem;
+  height: 2rem;
+}
+
+.pagination button {
+  width: 2rem;
+  background: var(--color-grey);
+  color: var(--color-text);
+  border: 0;
+  border-radius: var(--length-sm1);
+}
+
+.pagination button.active {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+}

@@ -1,0 +1,18 @@
+body .apexcharts-tooltip.apexcharts-theme-light {
+  color: var(--color-text);
+  background: rgba( 0, 0, 0, 0.55 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border: 0;
+  box-shadow: none;
+  padding: 0.5rem;
+  /* opacity: 1 !important; */
+}
+
+body .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  display: none;
+}
+
+body .apexcharts-xaxistooltip.apexcharts-xaxistooltip-bottom.apexcharts-theme-light {
+  display: none;
+}

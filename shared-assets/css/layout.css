@@ -1,0 +1,14 @@
+.container {
+  display: grid;
+  grid-gap: var(--length-md1);
+  grid-auto-columns: minmax(0, 1fr);
+  padding: var(--length-md1);
+  text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+}

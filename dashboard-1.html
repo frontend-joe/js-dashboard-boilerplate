@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/frontend-joe/assets@main/frontendjoe-favicon.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="shared-assets/css/reset.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="shared-assets/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="shared-assets/css/shared.css"
+    />
+    <link rel="stylesheet" type="text/css" href="shared-assets/css/cards.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-1-assets/css/apexcharts.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-1-assets/css/layout.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="dashboard-1-assets/css/cards.css"
+    />
+  </head>
+  <body data-theme="dark">
+    <div class="container">
+      <div class="card card-headline card-headline1">
+        <div>
+          <h4 class="card-h4">Sales</h4>
+          <h2 class="card-h2">1.3M</h2>
+        </div>
+        <div id="sparklines-bar"></div>
+      </div>
+      <div class="card card-headline card-headline2">
+        <div>
+          <h4 class="card-h4">Users</h4>
+          <h2 class="card-h2">98K</h2>
+        </div>
+        <span class="card-headline-icon uil uil-users-alt"></span>
+      </div>
+      <div class="card card-list">
+        <div class="card-list-item">
+          <span class="card-list-badge primary"></span>
+          <div>
+            <h4 class="card-h4">Monthly</h4>
+            <h2 class="card-h2">102K</h2>
+          </div>
+        </div>
+        <div class="card-list-item">
+          <span class="card-list-badge accent"></span>
+          <div>
+            <h4 class="card-h4">Weekly</h4>
+            <h2 class="card-h2">24K</h2>
+          </div>
+        </div>
+        <div class="card-list-item">
+          <span class="card-list-badge default"></span>
+          <div>
+            <h4 class="card-h4">Daily</h4>
+            <h2 class="card-h2">3.7K</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card has-extra-padding card-radial-bar">
+        <div>
+          <h3 class="card-h3">Radial Bar</h3>
+          <h4 class="card-h4">Usage</h4>
+          <h2 class="card-h2 has-bottom-margin">33%</h2>
+        </div>
+        <div id="radial-bar-chart"></div>
+      </div>
+      <div class="card has-extra-padding card-bar-chart">
+        <h3 class="card-h3">Bar Chart</h3>
+        <div class="card-headlines">
+          <div>
+            <h4 class="card-h4">New</h4>
+            <h2 class="card-h2 has-bottom-margin">1.9k</h2>
+          </div>
+          <div>
+            <h4 class="card-h4">VIP's</h4>
+            <h2 class="card-h2 has-bottom-margin">450</h2>
+          </div>
+          <div>
+            <h4 class="card-h4">Left</h4>
+            <h2 class="card-h2 has-bottom-margin">893</h2>
+          </div>
+        </div>
+        <div id="bar-chart"></div>
+      </div>
+      <div class="card has-extra-padding card-gauge-chart">
+        <h3 class="card-h3">Gauge Chart</h3>
+        <h4 class="card-h4">Most Popular</h4>
+        <h2 class="card-h2 has-bottom-margin">85%</h2>
+        <div id="gauge-chart"></div>
+      </div>
+      <div data-aos="fade-up" class="card has-extra-padding card-avatar-list">
+        <header class="card-header">
+          <h3 class="card-h3">Authors</h3>
+        </header>
+        <ul class="avatar-list">
+          <li>
+            <img class="avatar" src="shared-assets/images/joe.png" />
+            <span class="avatar-text-block">
+              <span class="avatar-title"> Joe Harrison </span>
+              <span class="avatar-notes"> HTML, CSS, React, Node </span>
+            </span>
+          </li>
+          <li>
+            <img class="avatar" src="shared-assets/images/dan.png" />
+            <span class="avatar-text-block">
+              <span class="avatar-title"> Dan Romero </span>
+              <span class="avatar-notes"> Figma, Figjam, Notion, CSS </span>
+            </span>
+          </li>
+          <li>
+            <img class="avatar" src="shared-assets/images/eugene.png" />
+            <span class="avatar-text-block">
+              <span class="avatar-title"> Andrew Eugene </span>
+              <span class="avatar-notes"> Figma, XD, Photoshop </span>
+            </span>
+          </li>
+          <li>
+            <img class="avatar" src="shared-assets/images/mike.png" />
+            <span class="avatar-text-block">
+              <span class="avatar-title"> Mike van Dijsel </span>
+              <span class="avatar-notes"> Figma, Sketch, Illustrator </span>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div data-aos="fade-up" class="card has-extra-padding card-timeline-list">
+        <header class="card-header">
+          <h3 class="card-h3 no-bottom-margin">Activity</h3>
+          <span class="card-header-icon uil uil-ellipsis-v"></span>
+        </header>
+        <div class="timeline">
+          <div class="timeline-row primary">
+            <span class="timeline-when"> 9:00am </span>
+            <span class="timeline-badge"></span>
+            <span class="timeline-text">
+              Mike updated his latest Figma designs entitled: "Turquoise
+              Dashboard Concept V3.9".
+            </span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-when"> 10:18am </span>
+            <span class="timeline-badge"></span>
+            <span class="timeline-text">
+              Joe pushed some awesome CSS code to his master repository!
+            </span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-when"> 11:51am </span>
+            <span class="timeline-badge"></span>
+            <span class="timeline-text">
+              Dan started to create Figma concepts for two clients with scope
+              for many projects for both.
+            </span>
+          </div>
+          <div class="timeline-row">
+            <span class="timeline-when"> 14:29am </span>
+            <span class="timeline-badge"></span>
+            <span class="timeline-text">
+              Joe marked two User Story tickets as done and completed.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card card-area-chart">
+        <header class="card-header">
+          <h3 class="card-h3 no-bottom-margin">Area Chart</h3>
+          <span class="card-header-icon uil uil-ellipsis-v"></span>
+        </header>
+        <div id="area-chart"></div>
+      </div>
+      <div class="card card-line-chart">
+        <header class="card-header">
+          <h3 class="card-h3 no-bottom-margin">Line Chart</h3>
+          <span class="card-header-icon uil uil-ellipsis-v"></span>
+        </header>
+        <div id="line-chart" class="floating"></div>
+      </div>
+    </div>
+    <script src="dashboard-1-assets/js/main.js"></script>
+  </body>
+</html>
