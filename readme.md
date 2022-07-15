@@ -13,7 +13,7 @@ This HTML and CSS boilerplate project is intended for those enrolled on my JS Da
 
 ### Running the code
 
-We will be using a the [live-server vs code extension](https://ritwickdey.github.io/vscode-live-server/) if you'd like to get it installed prior to taking the course.
+We will be using the [live-server vs code extension](https://ritwickdey.github.io/vscode-live-server/), if you'd like to get it installed prior to taking the course.
 
 ### Live demo
 
